@@ -18,7 +18,7 @@ set(DVBLINK_SOURCES src/base64.cpp
                     src/HttpPostClient.cpp
                     src/TimeShiftBuffer.cpp)
 
-add_subdirectory(lib/libdvdlinkremote)
+add_subdirectory(lib/libdvblinkremote)
 set(DEPLIBS ${xbmcplatform_LIBRARIES} dvblinkremote)
 build_addon(pvr.dvblink DVBLINK DEPLIBS)
 
