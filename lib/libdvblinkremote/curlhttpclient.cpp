@@ -22,6 +22,7 @@
  ***************************************************************************/
 
 #include "curlhttpclient.h"
+#include <string.h>
 
 using namespace dvblinkremotehttp;
 
