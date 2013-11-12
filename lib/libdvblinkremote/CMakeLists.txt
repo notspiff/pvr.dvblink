@@ -31,6 +31,6 @@ SET(SOURCES channel.cpp
             util.cpp
             xml_object_serializer_factory.cpp)
 
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+add_options(ALL_LANGUAGES ALL_BUILDS "-fPIC")
 
 ADD_LIBRARY(dvblinkremote STATIC ${SOURCES})
