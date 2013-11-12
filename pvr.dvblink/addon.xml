@@ -10,7 +10,7 @@
   </requires>
   <extension
     point="xbmc.pvrclient"
-    library_linux="XBMC_DVBLink.pvr"
+    library_linux="pvr.dvblink.so"
     library_osx="XBMC_DVBLink.pvr"
     library_wingl="XBMC_DVBLink_win32.dll"
     library_windx="XBMC_DVBLink_win32.dll"
