@@ -12,7 +12,8 @@ find_package(TinyXML2 REQUIRED)
 
 include_directories(${xbmcplatform_INCLUDE_DIRS}
                     ${XBMC_INCLUDE_DIR}
-                    ${TINYXML2_INCLUDE_DIRS})
+                    ${TINYXML2_INCLUDE_DIRS}
+                    ${PROJECT_SOURCE_DIR}/lib)
 
 add_definitions(-D__STDC_FORMAT_MACROS)
 
