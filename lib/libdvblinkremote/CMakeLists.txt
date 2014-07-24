@@ -31,6 +31,8 @@ SET(SOURCES channel.cpp
             util.cpp
             xml_object_serializer_factory.cpp)
 
-add_options(ALL_LANGUAGES ALL_BUILDS "-fPIC")
+if(NOT WIN32)
+  add_options(ALL_LANGUAGES ALL_BUILDS "-fPIC")
+endif()
 
 ADD_LIBRARY(dvblinkremote STATIC ${SOURCES})
