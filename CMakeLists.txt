@@ -19,8 +19,11 @@ add_definitions(-D__STDC_FORMAT_MACROS)
 
 set(DVBLINK_SOURCES src/base64.cpp
                     src/client.cpp
+                    src/DialogDeleteTimer.cpp
+                    src/DialogRecordPref.cpp
                     src/DVBLinkClient.cpp
                     src/HttpPostClient.cpp
+                    src/RecordingStreamer.cpp
                     src/TimeShiftBuffer.cpp)
 
 add_subdirectory(lib/libdvblinkremote)

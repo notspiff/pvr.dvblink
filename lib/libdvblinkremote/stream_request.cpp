@@ -73,6 +73,17 @@ RawHttpStreamRequest::~RawHttpStreamRequest()
 
 }
 
+RawHttpTimeshiftStreamRequest::RawHttpTimeshiftStreamRequest(const std::string& serverAddress, const long channelDvbLinkId, const std::string& clientId)
+  : StreamRequest(serverAddress, channelDvbLinkId, clientId, DVBLINK_REMOTE_STREAM_TYPE_RAW_HTTP_TIMESHIFT)
+{
+
+}
+
+RawHttpTimeshiftStreamRequest::~RawHttpTimeshiftStreamRequest()
+{
+
+}
+
 RawUdpStreamRequest::RawUdpStreamRequest(const std::string& serverAddress, const long channelDvbLinkId, const std::string& clientId, const std::string& clientAddress, const unsigned short int streamingPort)
   : m_clientAddress(clientAddress), m_streamingPort(streamingPort), StreamRequest(serverAddress, channelDvbLinkId, clientId, DVBLINK_REMOTE_STREAM_TYPE_RAW_UDP)
 { }
@@ -90,6 +101,39 @@ std::string& RawUdpStreamRequest::GetClientAddress()
 long RawUdpStreamRequest::GetStreamingPort() 
 { 
   return m_streamingPort; 
+}
+
+MP4StreamRequest::MP4StreamRequest(const std::string& serverAddress, const long channelDvbLinkId, const std::string& clientId, TranscodingOptions& transcodingOptions)
+	: TranscodedVideoStreamRequest(serverAddress, channelDvbLinkId, clientId, transcodingOptions, DVBLINK_REMOTE_STREAM_TYPE_MP4)
+{
+
+}
+
+MP4StreamRequest::~MP4StreamRequest()
+{
+
+}
+
+H264TSStreamRequest::H264TSStreamRequest(const std::string& serverAddress, const long channelDvbLinkId, const std::string& clientId, TranscodingOptions& transcodingOptions)
+    : TranscodedVideoStreamRequest(serverAddress, channelDvbLinkId, clientId, transcodingOptions, DVBLINK_REMOTE_STREAM_TYPE_H264TS)
+{
+
+}
+
+H264TSStreamRequest::~H264TSStreamRequest()
+{
+
+}
+
+H264TSTimeshiftStreamRequest::H264TSTimeshiftStreamRequest(const std::string& serverAddress, const long channelDvbLinkId, const std::string& clientId, TranscodingOptions& transcodingOptions)
+    : TranscodedVideoStreamRequest(serverAddress, channelDvbLinkId, clientId, transcodingOptions, DVBLINK_REMOTE_STREAM_TYPE_H264TS_HTTP_TIMESHIFT)
+{
+
+}
+
+H264TSTimeshiftStreamRequest::~H264TSTimeshiftStreamRequest()
+{
+
 }
 
 HttpLiveStreamRequest::HttpLiveStreamRequest(const std::string& serverAddress, const long channelDvbLinkId, const std::string& clientId, TranscodingOptions& transcodingOptions)
@@ -141,6 +185,9 @@ bool StreamRequestSerializer::WriteObject(std::string& serializedData, StreamReq
 
   if (objectGraph.GetStreamType() == DVBLINK_REMOTE_STREAM_TYPE_ANDROID ||
     objectGraph.GetStreamType() == DVBLINK_REMOTE_STREAM_TYPE_IPHONE ||
+    objectGraph.GetStreamType() == DVBLINK_REMOTE_STREAM_TYPE_MP4 ||
+    objectGraph.GetStreamType() == DVBLINK_REMOTE_STREAM_TYPE_H264TS ||
+    objectGraph.GetStreamType() == DVBLINK_REMOTE_STREAM_TYPE_H264TS_HTTP_TIMESHIFT ||
     objectGraph.GetStreamType() == DVBLINK_REMOTE_STREAM_TYPE_WINPHONE) {
       tinyxml2::XMLElement* xmlTranscoderElement = GetXmlDocument().NewElement("transcoder");
 

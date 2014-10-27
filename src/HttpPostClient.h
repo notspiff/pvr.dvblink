@@ -21,6 +21,8 @@
  *  http://www.gnu.org/copyleft/gpl.html
  *
  */
+
+#pragma once
  
 #include "libdvblinkremote/dvblinkremote.h"
 #include "libdvblinkremote/dvblinkremotehttp.h"
