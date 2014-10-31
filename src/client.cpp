@@ -24,10 +24,10 @@
  */
 
 #include "client.h"
-#include "xbmc/xbmc_pvr_dll.h"
+#include "kodi/xbmc_pvr_dll.h"
 #include "DVBLinkClient.h"
-#include "xbmc/util/util.h"
-#include "xbmc/util/timeutils.h"
+#include "kodi/util/util.h"
+#include "kodi/util/timeutils.h"
 #include "RecordingStreamer.h"
 
 using namespace std;

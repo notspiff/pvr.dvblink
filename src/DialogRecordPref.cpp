@@ -21,7 +21,7 @@
  */
 
 #include "DialogRecordPref.h"
-#include "xbmc/libXBMC_gui.h"
+#include "kodi/libXBMC_gui.h"
 
 using namespace ADDON;
 

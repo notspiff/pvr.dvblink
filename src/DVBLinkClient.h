@@ -25,17 +25,17 @@
  
 #pragma once
 
-#include "xbmc/os.h"
+#include "kodi/os.h"
 #include "libdvblinkremote/dvblinkremote.h"
 #include "HttpPostClient.h"
 #include "TimeShiftBuffer.h"
-#include "xbmc/xbmc_pvr_types.h"
-#include "xbmc/libXBMC_addon.h"
-#include "xbmc/libXBMC_pvr.h"
+#include "kodi/xbmc_pvr_types.h"
+#include "kodi/libXBMC_addon.h"
+#include "kodi/libXBMC_pvr.h"
 #include "client.h"
-#include "xbmc/threads/threads.h"
-#include "xbmc/threads/mutex.h"
-#include "xbmc/util/util.h"
+#include "kodi/threads/threads.h"
+#include "kodi/threads/mutex.h"
+#include "kodi/util/util.h"
 #include <map>
 
 #define DVBLINK_BUILD_IN_RECORDER_SOURCE_ID   "8F94B459-EFC0-4D91-9B29-EC3D72E92677"

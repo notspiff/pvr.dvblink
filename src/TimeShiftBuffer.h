@@ -25,10 +25,10 @@
  
 #pragma once
 
-#include "xbmc/libXBMC_addon.h"
-#include "xbmc/util/StdString.h"
+#include "kodi/libXBMC_addon.h"
+#include "kodi/util/StdString.h"
 #include "libdvblinkremote/dvblinkremote.h"
-#include "xbmc/util/util.h"
+#include "kodi/util/util.h"
 
 class LiveStreamerBase
 {
