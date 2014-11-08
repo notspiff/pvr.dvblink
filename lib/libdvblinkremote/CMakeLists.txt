@@ -37,3 +37,7 @@ if(NOT WIN32)
 endif()
 
 ADD_LIBRARY(dvblinkremote STATIC ${SOURCES})
+
+if(WIN32)
+  target_link_libraries(dvblinkremote ws2_32)
+endif()
