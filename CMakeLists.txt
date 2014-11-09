@@ -10,7 +10,7 @@ find_package(kodi REQUIRED)
 find_package(kodiplatform REQUIRED)
 find_package(TinyXML2 REQUIRED)
 
-include_directories(${KODIPLATFORM_INCLUDE_DIRS}
+include_directories(${kodiplatform_INCLUDE_DIRS}
                     ${KODI_INCLUDE_DIR}
                     ${TINYXML2_INCLUDE_DIRS}
                     ${PROJECT_SOURCE_DIR}/lib)
@@ -27,7 +27,7 @@ set(DVBLINK_SOURCES src/base64.cpp
                     src/TimeShiftBuffer.cpp)
 
 add_subdirectory(lib/libdvblinkremote)
-set(DEPLIBS ${KODIPLATFORM_LIBRARIES} dvblinkremote ${TINYXML2_LIBRARIES})
+set(DEPLIBS ${kodiplatform_LIBRARIES} dvblinkremote ${TINYXML2_LIBRARIES})
 build_addon(pvr.dvblink DVBLINK DEPLIBS)
 
 include(CPack)
