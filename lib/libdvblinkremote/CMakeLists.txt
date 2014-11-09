@@ -5,7 +5,6 @@ ENABLE_LANGUAGE(CXX)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
 SET(SOURCES channel.cpp
-            curlhttpclient.cpp
             dvblinkremotecommunication.cpp
             dvblinkremote.cpp
             dvblinkremotehttp.cpp
@@ -31,6 +30,14 @@ SET(SOURCES channel.cpp
             util.cpp
             xml_object_serializer_factory.cpp)
 
-add_options(ALL_LANGUAGES ALL_BUILDS "-fPIC")
+if(NOT WIN32)
+  list(APPEND SOURCES curlhttpclient.cpp)
+
+  add_options(ALL_LANGUAGES ALL_BUILDS "-fPIC")
+endif()
 
 ADD_LIBRARY(dvblinkremote STATIC ${SOURCES})
+
+if(WIN32)
+  target_link_libraries(dvblinkremote ws2_32)
+endif()
