@@ -1,3 +1,24 @@
+[B]Version 1.9.14[/B]
+Updated: language files from Transifex
+
+[B]Version 1.9.13[/B]
+Added: getBackendHostname function
+Fixed: no timers are added from EPG of DVBLink TV Adviser product
+
+[B]Version 1.9.12[/B]
+Added: Grouping recordings by series
+Added: Year to the episode title
+Fixed: incorrect available disk space calculations
+
+[B]Version 1.9.11[/B]
+Updated: Fixed crash when switching channels with enabled timeshifting
+
+[B]Version 1.9.10[/B]
+Updated: language files from Transifex
+
+[B]Version 1.9.9[/B]
+Updated: change library name to Kodi
+
 [B]Version 1.9.8[/B]
 Fixed: deadlock when activating the addon on some darwin (osx, ios) runtimes
 
