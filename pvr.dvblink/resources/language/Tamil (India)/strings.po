@@ -18,7 +18,7 @@ msgstr ""
 
 msgctxt "#30000"
 msgid "General"
-msgstr "பொதுவானவை"
+msgstr "பொதுவானது"
 
 msgctxt "#30005"
 msgid "Username"
@@ -26,15 +26,11 @@ msgstr "பயனர்பெயர்"
 
 msgctxt "#30006"
 msgid "Password"
-msgstr "கடவுச்சொல்"
+msgstr "அடையாளச் சொல்"
 
 msgctxt "#30100"
 msgid "Stream"
 msgstr "ஒலிப்பேழை"
-
-msgctxt "#30102"
-msgid "Enable transcoding"
-msgstr "டிரான்ஸ்கோடிங்கு செயல்படுத்து"
 
 msgctxt "#30105"
 msgid "Bitrate"
@@ -44,21 +40,9 @@ msgctxt "#30107"
 msgid "HTTP"
 msgstr "HTTP"
 
-msgctxt "#30109"
-msgid "HLS"
-msgstr "HLS"
-
-msgctxt "#30111"
-msgid "Enable Timeshift"
-msgstr "நேரமாற்றத்தை செயல்படுத்து"
-
-msgctxt "#30112"
-msgid "Timeshift buffer path"
-msgstr "நேரமாற்ற இடையக பாதை"
-
 msgctxt "#30200"
 msgid "Advanced"
-msgstr "மேம்பட்டது"
+msgstr "மேம்பட்ட"
 
 msgctxt "#32014"
 msgid "Delete timer"
