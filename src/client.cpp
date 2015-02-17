@@ -435,6 +435,7 @@ PVR_ERROR GetAddonCapabilities(PVR_ADDON_CAPABILITIES* pCapabilities)
 {
   pCapabilities->bSupportsEPG                = true;
   pCapabilities->bSupportsRecordings         = true;
+  pCapabilities->bSupportsRecordingsUndelete = false;
   pCapabilities->bSupportsTimers             = true;
   pCapabilities->bSupportsTV                 = true;
   pCapabilities->bSupportsRadio              = true;
@@ -641,7 +642,7 @@ PVR_ERROR UpdateTimer(const PVR_TIMER &timer)
 }
 
 
-int GetRecordingsAmount(void)
+int GetRecordingsAmount(bool deleted)
 {
   if (dvblinkclient)
     return dvblinkclient->GetRecordingsAmount();
@@ -649,7 +650,7 @@ int GetRecordingsAmount(void)
   return -1;
 }
 
-PVR_ERROR GetRecordings(ADDON_HANDLE handle) 
+PVR_ERROR GetRecordings(ADDON_HANDLE handle, bool deleted)
 {
   if (dvblinkclient)
     return dvblinkclient->GetRecordings(handle); 
@@ -764,7 +765,7 @@ PVR_ERROR GetStreamProperties(PVR_STREAM_PROPERTIES* pProperties)
 }
 
 
-PVR_ERROR DialogChannelScan(void)
+PVR_ERROR OpenDialogChannelScan(void)
 {
   return PVR_ERROR_NOT_IMPLEMENTED;
 }
@@ -789,12 +790,12 @@ PVR_ERROR MoveChannel(const PVR_CHANNEL &channel)
   return PVR_ERROR_NOT_IMPLEMENTED;
 }
 
-PVR_ERROR DialogChannelSettings(const PVR_CHANNEL &channel)
+PVR_ERROR OpenDialogChannelSettings(const PVR_CHANNEL &channel)
 {
   return PVR_ERROR_NOT_IMPLEMENTED;
 }
 
-PVR_ERROR DialogAddChannel(const PVR_CHANNEL &channel)
+PVR_ERROR OpenDialogChannelAdd(const PVR_CHANNEL &channel)
 {
   return PVR_ERROR_NOT_IMPLEMENTED;
 }
@@ -841,6 +842,16 @@ PVR_ERROR SetRecordingLastPlayedPosition(const PVR_RECORDING &recording, int las
 int GetRecordingLastPlayedPosition(const PVR_RECORDING &recording)
 {
   return -1;
+}
+
+PVR_ERROR UndeleteRecording(const PVR_RECORDING& recording)
+{
+  return PVR_ERROR_NOT_IMPLEMENTED;
+}
+
+PVR_ERROR DeleteAllRecordingsFromTrash()
+{
+  return PVR_ERROR_NOT_IMPLEMENTED;
 }
 
 void DemuxAbort(void)
